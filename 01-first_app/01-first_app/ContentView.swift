@@ -14,6 +14,9 @@ struct ContentView: View {
             .fontWeight(.bold)
             .font(.system(.largeTitle, design: .serif))
             .foregroundColor(.green)
+            .underline(true, color: .red)
+            .fontWeight(.bold)
+            .italic()
     }
 }
 
