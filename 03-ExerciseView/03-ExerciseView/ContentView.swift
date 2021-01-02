@@ -1,5 +1,13 @@
 //
 //  ContentView.swift
+//  03-ExerciseView
+//
+//  Created by Lorenzo Jaime Castro Vazquez1 on 01/01/21.
+//  Copyright © 2021 Lorenzo Jaime Castro Vazquez1. All rights reserved.
+//
+
+//
+//  ContentView.swift
 //  03-stacks
 //
 //  Created by Lorenzo Jaime Castro Vazquez1 on 01/01/21.
@@ -12,11 +20,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            HeaderView()
-            BasicoYCarreraView()
-            DefinitivoView()
-            Spacer()
-            
+            ZStack{
+                HeaderView()
+                    .offset(x: 0, y: -350)
+                BasicoYCarreraView()
+                DefinitivoView()
+                Spacer()
+            }
         }
     }
 }
@@ -84,11 +94,11 @@ struct PricingView: View {
 
 struct BasicoYCarreraView: View {
     var body: some View {
-        HStack(spacing: 8){
+        VStack(spacing: 8){
             
-            PricingView(title: "Básico", subTitle: "Un curso incluido", price: "9.99€", texColor: .white, backgroundColor: .green,icon: nil)
+            PricingView(title: "Básico", subTitle: "Un curso incluido", price: "9.99€", texColor: .white, backgroundColor: .green,icon: "star")
             ZStack{
-                PricingView(title: "Carrera", subTitle: "Toda una carrera", price: "29.99€", texColor: .black, backgroundColor: Color(red:230/255, green:230/255, blue:230/255),icon: nil)
+                PricingView(title: "Carrera", subTitle: "Toda una carrera", price: "29.99€", texColor: .black, backgroundColor: Color(red:220/255, green:220/255, blue:220/255),icon: "star.circle")
                 
                 Text("El mejor para empezar")
                     .font(.system(.caption, design: .rounded))
@@ -97,9 +107,9 @@ struct BasicoYCarreraView: View {
                     .padding(8)
                     .background(Color(red:240/255, green:180/255, blue:50/255))
                     .offset(x: 0, y: -85)
-            }
+            }.offset(x: 0, y: -90)
         }.padding(.horizontal)
-    }
+            .offset(x:0, y:-70)    }
 }
 
 struct DefinitivoView: View {
@@ -117,6 +127,8 @@ struct DefinitivoView: View {
             
             
         }.padding(.vertical)
+        .offset(x: 0, y: 50)
     
     }
 }
+
