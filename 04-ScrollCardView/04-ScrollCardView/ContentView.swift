@@ -27,7 +27,7 @@ struct ContentView: View {
                 Text("Otros cursos")
                     .fontWeight(.bold)
                     .padding()
-                            ScrollView(.horizontal,showsIndicators: false) {
+                    ScrollView(.horizontal,showsIndicators: false) {
                     OtrosCursosView()
                 }
             }
