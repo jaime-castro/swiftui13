@@ -71,8 +71,8 @@ struct ContentView_Previews: PreviewProvider {
 
 struct Plane: Identifiable {
     var id = UUID()
-    var name: String
-    var image: String
+    var name:     String
+    var image:    String
     var feature : Bool = false
 }
 
